@@ -1,0 +1,79 @@
+:root{
+    --cor-fundo: #dadada;
+    --cor-calculadora: #202020;
+    --cor-visor: ;
+    --cor-equacao: #7d7d7d;
+    --cor-botao-operacao: #2d2d2d;
+    --cor-botao-algarismo: #3c3c3c;
+    --cor-botao-igual: #4cc2ff;
+
+    font-size: 16px;
+}
+
+*{
+    font-family: 'Golos Text', sans-serif;
+    color: #ffffff;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculadora{
+    background-color: var(--cor-calculadora);
+    border-radius: 5px;
+    border: none;
+    /* overflow: hidden; */
+    padding: 3px;
+}
+
+#visor{
+    padding: 20px; 
+    text-align: right;
+}
+
+#valor {
+    font-size: 3rem;
+}
+
+#botoes{
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(5, 50px);
+}
+#botoes > button{ 
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin: 1px;
+}
+
+.operacao, .acao{
+    background-color: var(--cor-botao-operacao);
+}
+
+.operacao:hover, .acao:hover{
+    background-color: var(--cor-botao-algarismo);
+}
+
+.algarismo{
+    background-color: var(--cor-botao-algarismo);
+}
+
+.algarismo:hover{
+    background-color: var(--cor-botao-operacao);
+}
+
+#igual{
+    color: #202020;
+    background-color: var(--cor-botao-igual);
+}
+
+#igual:hover{
+    background-color: #47b1e8;
+}
