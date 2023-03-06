@@ -24,7 +24,7 @@ botoes.addEventListener('click', (evento) => {
 
     //OPERACOES
     else if (evento.target.classList.contains('operacao')) {
-        console.log('ultima tecla: ' + classe);
+        
 
         //ultimo digitado foi operador
         if(classe === 'operacao'){
@@ -32,7 +32,6 @@ botoes.addEventListener('click', (evento) => {
         }
         //ultimo digitado foi igual
         else if(classe === 'igual'){
-            console.log('entrei igual');
             equacao.textContent = valor.textContent + valorTecla;
             valor.textContent = 0;
         }
@@ -43,7 +42,6 @@ botoes.addEventListener('click', (evento) => {
         }
         else{
             let resul = equacao.textContent + valor.textContent;
-            console.log('a operacao é: ' + resul);
             equacao.textContent = eval(resul) + valorTecla;
             valor.textContent = 0;
         }
@@ -79,8 +77,9 @@ botoes.addEventListener('click', (evento) => {
                 valor.textContent = valor.textContent * (-1);
                 break;
             default: //'.'
-                valor.textContent += valorTecla;
-
+                If(!valor.textContent.includes('.')){
+                    valor.textContent += valorTecla;
+                }
         }
 
         classe = 'acao';
