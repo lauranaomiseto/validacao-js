@@ -77,7 +77,7 @@ botoes.addEventListener('click', (evento) => {
                 valor.textContent = valor.textContent * (-1);
                 break;
             default: //'.'
-                If(!valor.textContent.includes('.')){
+                if(!valor.textContent.includes('.')){
                     valor.textContent += valorTecla;
                 }
         }
